@@ -14,6 +14,8 @@ let audio = new Audio("audio/onlymp3.to - Grimes World Princess Part II-oQRcWRzq
 // seek state - are we seeking?
 let seeking = false
 
+containerColor.style.backgroundColor = "rgb(248, 208, 228)"
+
 // function for listening for play / pause button click
 playButton.onclick = (event) => {
     if (audio.paused) {
@@ -38,34 +40,6 @@ oblivion.onclick = (event) => {
     }
 }
 
-// CODE TO CHANGE THE HOVER DEPENDING ON STYLING THAT DOESN'T WORK
-
-// oblivion.onmouseover = (event) => {
-//     if (containerColor.style.backgroundColor == "#f8d0e4") {
-//         oblivion.style.color = "#f03c2c"
-//     } else if (containerColor.style.backgroundColor == "#7d4e65") {
-//         oblivion.style.color = "#548068"
-//     } else {
-//         oblivion.style.color = "#6e959e"
-//     }
-// }
-
-// oblivion.onmouseover = (event) => {
-//     if (coverArt.src == "images/art-angels.png") {
-//         oblivion.style.color = "#f03c2c"
-//     } else if (coverArt.src == "images/visions.png") {
-//         oblivion.style.color = "#548068"
-//     } else {
-//         oblivion.style.color = "#6e959e"
-//     }
-// }
-
-// oblivion.onmouseleave = (event) => {
-//     oblivion.style.color = "black"
-// }
-
-// END OF BROKEN CODE
-
 worldPrincess.onclick = (event) => {
     audio.src = "audio/onlymp3.to - Grimes World Princess Part II-oQRcWRzq6Mw-192k-1698673113.mp3";
     coverArt.src = "images/art-angels.png"
@@ -86,6 +60,50 @@ aem.onclick = (event) => {
         // calling the play method (built in function)
         audio.play();
     }
+}
+
+// functions for changing the text hover color, based on the song selection
+
+oblivion.onmouseover = (event) => {
+    if (containerColor.style.backgroundColor == "rgb(248, 208, 228)") {
+        oblivion.style.color = "rgb(240,60,43)"
+    } else if (containerColor.style.backgroundColor == "rgb(202, 204, 205)") {
+        oblivion.style.color = "rgb(83,10,12)"
+    } else {
+        oblivion.style.color = "rgb(88,146,114)"
+    }
+}
+
+oblivion.onmouseleave = (event) => {
+    oblivion.style.color = ""
+}
+
+worldPrincess.onmouseover = (event) => {
+    if (containerColor.style.backgroundColor == "rgb(248, 208, 228)") {
+        worldPrincess.style.color = "rgb(240,60,43)"
+    } else if (containerColor.style.backgroundColor == "rgb(202, 204, 205)") {
+        worldPrincess.style.color = "rgb(83,10,12)"
+    } else {
+        worldPrincess.style.color = "rgb(88,146,114)"
+    }
+}
+
+worldPrincess.onmouseleave = (event) => {
+   worldPrincess.style.color = ""
+}
+
+aem.onmouseover = (event) => {
+    if (containerColor.style.backgroundColor == "rgb(248, 208, 228)") {
+        aem.style.color = "rgb(240,60,43)"
+    } else if (containerColor.style.backgroundColor == "rgb(202, 204, 205)") {
+        aem.style.color = "rgb(83,10,12)"
+    } else {
+        aem.style.color = "rgb(88,146,114)"
+    }
+}
+
+aem.onmouseleave = (event) => {
+    aem.style.color = ""
 }
 
 //audio object listeners

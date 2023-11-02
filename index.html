@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grimes Sampler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/simple-player.js" defer></script>
+</head>
+
+<body>
+    <div id="master-container">
+        <h4>Grimes Sampler</h4>
+        <img id="cover-art" src="images/art-angels.png">
+        <div id="time">
+            <p id="current-time">00:00</p>
+            <input id="seek-bar" type="range" min="0" value="0" disabled>
+            <p id="total-time">00:00</p>
+        </div>
+        <img id="play-pause-button" src="images/play.svg">
+        <div id="song-names">
+            <p id="world-princess" class="text">World Princess Part II</p>
+            <p id="oblivion" class="text">Oblivion</p>
+            <p id="4aem" class="text">4ÆM</p>
+        </div>
+        <div id="volume">
+            <img id="vol-low" src="images/vol-low.svg">
+            <input id="volume-bar" type="range" min="0" max="100" disabled>
+            <img id="vol-high" src="images/vol-high.svg">
+        </div>
+    </div>
+</body>
+
+</html>
